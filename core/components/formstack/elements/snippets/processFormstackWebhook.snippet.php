@@ -3,7 +3,7 @@
  *
  */
 
-/** @var string $hooks ~ comma separted list of valid MODX Snippets  */
+/** @var string $hooks ~ comma separated list of valid MODX Snippets  */
 $hooks = $modx->getOption('hooks', $scriptProperties, false);
 
 /** @var int $form_id ~ a valid Formstack from ID  */
@@ -13,7 +13,7 @@ $form_id = $modx->getOption('formID', $scriptProperties, 0);
 $handshake = $modx->getOption('handshake', $scriptProperties, 1);
 
 /** @var bool $debug ~ will write to error log  */
-$debug = true;// $modx->getOption('debug', $scriptProperties, true);
+$debug = $modx->getOption('debug', $scriptProperties, false);
 
 if(is_object($modx->resource)) {
     if ($form_id == 0) {
